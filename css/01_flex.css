@@ -1,0 +1,91 @@
+/* style pour la page 0 sur flex */
+/* le parent doit être flex pour que les enfants fonctionnent */
+body {
+    background-color: lightblue;
+}
+
+main {
+    background-color: white;
+    margin: 0 auto;
+    width: 800px;
+    min-height: 400px;
+    /* ici, on dit a MAIN d'avoir la taille minimum 400px */
+    /* padding: 50px; */
+}
+
+h1 {
+    text-align: center;
+
+}
+
+.or {
+    background-color: yellow;
+}
+
+
+.argent {
+    background-color: lightgrey;
+}
+
+.vert {
+    background-color:lightgreen;
+}
+
+.rose {
+    background-color: pink;
+}
+
+/* FLEX */
+
+.flex {
+    background-color: orange;
+    margin: auto;
+
+    /* 1 - le parent est display-flex : le parent est la DIV "class d-flex" */
+       display: flex;
+
+    /* 3 - si le parent est trop petit, les div enfants s'adaptent à la largeur du parent, ils vont rentrer quoi qu'il arrive */
+    width: 600px;
+    height: 800px;
+
+    /* 4 - si on a flex-wrap; wrap la largeur des enfants est respectee. Le 4e element va à la ligne */
+    /* flex-wrap: wrap; */
+
+    /* 5 - Si on utilise flex-wrap: wrap-reverse, le dernier elemetn qui ne rentre pas dans le parent passe en PREMIER */
+    /* flex-wrap: wrap-reverse; */
+
+    /* 6 - Avec flex-wrap: nowrap : comportement normal où par defaut : on force l'alignement et le redimensionnement des éléments */
+    /* flex-wrap: nowrap; */
+
+    /* 7 - La justification des éléments avec justif-content peut prendre différentes valeurs; flex-start par défaut ( au, flex-end à la fin, centre au centre, space-between met espace entre les elements, space-evenly mets espaces entre touts les elemnt de façon égale*/
+    justify-content: space-evenly;
+
+    /* 8 - Autre proprieté,  hauter ALIGN-ITEMS et l'aglignement vertical; strecht valeur par défaut, CENTER au centre, flex-star au début, flex-end à la fin et baseline // pour ranger les elements à l'interieur du parent */
+    align-items: center;   
+}
+
+.flex div {
+    /* 2- toutes les DIV dans la DIV parent, qui est flex ont une largeur définie*/
+    width: 100px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.h-50 {
+    height: 50%;
+}
+
+.h-75 {
+    height: 75%;
+}
+
+.t-cap {
+    text-transform: uppercase;
+}
+
+
+
+
+/* MDN : La propriété flex-wrap indique si les éléments flexibles sont contraints à être disposés sur une seule ligne ou s'ils peuvent être affichés sur plusieurs lignes avec un retour automatique. Si le retour à la ligne est autorisé, la propriété permet également de contrôler la direction dans laquelle les lignes sont empilées.*/
+
+/* MDN : La propriété flex-direction définit la façon dont les éléments flexibles sont placés dans un conteneur flexible : elle définit l'axe principal et la direction des éléments (normale ou inversée).*/

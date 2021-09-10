@@ -1,0 +1,66 @@
+/* style pour la page 3 sur flex - pisola CBS */
+
+body {
+    background-color: rgb(25, 182, 235);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    min-height: 500px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.or {
+    background-color: rgb(245, 219, 75);
+}
+
+.argent {
+    background-color: rgb(228, 227, 222);
+}
+
+.vert {
+    background-color: rgb(200, 245, 75);
+}
+
+.rose {
+    background-color: rgb(238, 184, 184);
+}
+
+
+/* flex  */
+
+.flex {
+    /* background-color: grey; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    /* goutieres entre les rangées */
+    /* row-gap: 20px; */
+
+    /* goutières entre les colonnes */
+    /* column-gap: 2px; */
+
+    gap: 20px 2%; /* row-gap et colomn-gap */
+
+    justify-content: center;
+}
+
+.flex div {
+    text-align: justify; 
+    width: 49%;
+}
+
+
+
+
+
+/* MDN : La propriété flex-wrap indique si les éléments flexibles sont contraints à être disposés sur une seule ligne ou s'ils peuvent être affichés sur plusieurs lignes avec un retour automatique. Si le retour à la ligne est autorisé, la propriété permet également de contrôler la direction dans laquelle les lignes sont empilées.*/
+
+/* MDN : La propriété flex-direction définit la façon dont les éléments flexibles sont placés dans un conteneur flexible : elle définit l'axe principal et la direction des éléments (normale ou inversée).*/
