@@ -1,4 +1,6 @@
 * {
+    /* margin: 0;
+    padding: 0; */
     box-sizing : border-box;
 }
 
@@ -6,7 +8,7 @@
 
 body {
     background-color: gold;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.1em;
     color: #333;
     text-align: justify;
@@ -14,24 +16,34 @@ body {
 
 main {
     background-color: white;
+    margin: 0 auto;
+    width: 1200px;
+    min-height: 600px;
+}
+
+.conteneur {
+    background-color: white;
 }
 
 .bleu-leger {
     background-color: lightskyblue;
 }
 
-
 .vert-leger {
     background-color: lightseagreen;
 }
 
-.conteneur {
-    width: 100%;
-    background-color: white;
+.rose {
+    background-color: pink;
+}
+
+.bleu {
+    background-color: blue;
 }
 
 
-/* la classe pour créer une rangée */
+
+/* la class pour créer une rangée */
 
 .row {
     display: flex;
@@ -40,23 +52,23 @@ main {
 
 /* la grille sur 12 colonnes, et la définition de la largeur des colonnes */
 
-.col-1 {
+.row .col-1 {
     /* cette valeur est la largeur en % d'une colonne si je veux la largeur de 2 colonnes je fais la largeur d'une colonne X 2 */
     width: 8.333333%;
     padding: 5px;
 }
 
-.col-2 {
+.row .col-2 {
     width: 16.666666%;
     padding: 5px;
 }
 
-.col-3 {
-    width: 25%;
+/* .col-3 {
+    width: 50%;
     padding: 5px;
-}
+} */
 
-.col-4 {
+/* .col-4 {
     width: 33.333333%;
     padding: 5px;
 }
@@ -69,9 +81,9 @@ main {
 .col-6 {
     width: 50%;
     padding: 5px;
-}
+} */
 
-.col-7 {
+/* .col-7 {
     width: 58.333333%;
     padding: 5px;
 }
@@ -89,14 +101,35 @@ main {
 .col-12 {
     width: 100%;
     padding: 5px;    
+} */
+
+
+/***** ICI EXO 12 colonnes sur nouveau ROW - 2eeme DIV : row-2 ****/
+
+.row-2 {
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    /* justify-content: space-evenly; */
 }
 
+.row-2 div {
+    width: 8.333333%;
+    /* width: 6%; */
+    border: 1px solid red;
+}
 
+.col-1, .col-3, .col-5, .col-7, .col-9, .col-11 {
+    background-color: aquamarine;
+}
 
+.argent {
+    background-color: lightgrey;
+}
 
-
-
-
+p {
+    text-align: center;
+}
 
 
 
@@ -106,3 +139,18 @@ main {
 /* MDN : La propriété flex-wrap indique si les éléments flexibles sont contraints à être disposés sur une seule ligne ou s'ils peuvent être affichés sur plusieurs lignes avec un retour automatique. Si le retour à la ligne est autorisé, la propriété permet également de contrôler la direction dans laquelle les lignes sont empilées.*/
 
 /* MDN : La propriété flex-direction définit la façon dont les éléments flexibles sont placés dans un conteneur flexible : elle définit l'axe principal et la direction des éléments (normale ou inversée).*/
+
+/* .flex div {
+    text-align: justify;
+    width: 49%;
+    /* Avec WIDTH plu grand, les enfants s'adaptent à la taille du parent et descendaent à la ligne en foction, avec WIDTH plus petits, ils s adaptent et deviennent des petite carrés dans le parent */
+
+
+/* goutieres entre les rangées */
+    /* row-gap: 20px; */
+
+    /* goutières entre les colonnes */
+    /* column-gap: 2px; */
+  
+    /* row-gap et colomn-gap:
+    gap: 20px 2%; */

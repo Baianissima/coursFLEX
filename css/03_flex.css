@@ -2,7 +2,7 @@
 
 body {
     background-color: rgb(25, 182, 235);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 main {
@@ -24,12 +24,24 @@ h1 {
     background-color: rgb(228, 227, 222);
 }
 
+.magenta {
+    background-color: magenta;
+}
+
 .vert {
     background-color: rgb(200, 245, 75);
 }
 
 .rose {
     background-color: rgb(238, 184, 184);
+}
+
+.aqua {
+    background-color: aqua;
+}
+
+.lightseagreen {
+    background-color: lightseagreen;
 }
 
 
@@ -46,15 +58,17 @@ h1 {
 
     /* goutières entre les colonnes */
     /* column-gap: 2px; */
-
-    gap: 20px 2%; /* row-gap et colomn-gap */
+  
+    /* row-gap et colomn-gap */
+    gap: 20px 2%;
 
     justify-content: center;
 }
 
 .flex div {
-    text-align: justify; 
+    text-align: justify;
     width: 49%;
+    /* Avec WIDTH plu grand, les enfants s'adaptent à la taille du parent et descendaent à la ligne en foction, avec WIDTH plus petits, ils s adaptent et deviennent des petite carrés dans le parent */
 }
 
 

@@ -1,9 +1,16 @@
 /* style pour la page 2 sur flex */
 /* le parent doit être flex pour que les enfants fonctionnent */
 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: lightskyblue;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 main {
@@ -15,7 +22,6 @@ main {
     
 h1 {
     text-align: center;
-
 }
 
 .or {
@@ -34,9 +40,26 @@ h1 {
     background-color: pink;
 }
 
+.aqua {
+    background-color: aqua;
+}
+
+.bisque {
+    background-color: bisque;
+}
+
+.blueviolet {
+background-color: blueviolet;
+}
+
+.lightseagreen{
+    background-color: lightseagreen;
+}
+
+
 /* La premiere DIV FLEX */
 .flex {
-    background-color: pink;
+    /* background-color: pink; */
     display: flex;
     /* par défaut les enfants seront flex-direction row; dans la rangée - row-reverse on inverse l ordre des elements -- column met tout en colonne -- column-reverse on inverse l'ordre des elements dans la hauteur  */
     /* flex-direction: row; */
@@ -46,10 +69,11 @@ h1 {
     /* la proprieté GAP contrôle spécifiquemen l'espace entres les élements flex (en langage maquette : on a des colonnes avec des goutières / gap="écart"=espacement / "goutière" en langage maquette = "gap" en CSS*/
     /* gap: 40px;
     row-gap: 40px;
-    flex-wrap: wrap; 
-} */
+    flex-wrap: wrap; */
+} 
 
 /* la seconde DIV FLEX */
+
 .flex div {
     /* padding: 5px; */
     text-align: justify;
@@ -78,6 +102,10 @@ h1 {
 
 .h-75 {
     height: 75%;
+}
+
+.h- {
+    height: 100%;
 }
 
 
