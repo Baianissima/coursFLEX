@@ -1,0 +1,226 @@
+* {
+    box-sizing : border-box;
+}
+
+/* Une grille avec flex et du responsive */
+
+body {
+    background-color: lightyellow;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+/* Couleurs pour identifier */
+
+.bleu-leger {
+    background-color: lightskyblue;
+}
+
+.vert-leger {
+    background-color: lightgreen;
+}
+
+.gris-leger {
+    background-color: lightgray;
+}
+
+/* La classe pour creer une rangée */
+
+.row {
+    display: flex;
+    flex-direction: row;
+    /* passage à la ligne des éléments pour que la largeur des col soit respectée */
+    flex-wrap: wrap;
+    row-gap: 5px;
+    margin-bottom: 5px;
+}
+
+/* .column {
+    display: flex;
+    flex-direction: colomn;
+}
+
+/* la grille sur 12 colonnes, et la définition de la largeur des colonnes */
+
+.col-1 {
+    /* cette valeur est la largeur en % d'une colonne si je veux la largeur de 2 colonnes je fais la largeur d'une colonne X 2 */
+    width: 8.333333%;
+    padding: 5px;
+}
+
+.col-2 {
+    width: 16.666666%;
+    padding: 5px;
+}
+
+.col-3 {
+    width: 50%;
+    padding: 5px;
+}
+
+.col-4 {
+    width: 33.333333%;
+    padding: 5px;
+}
+
+.col-5 {
+    width: 41.666666%;
+    padding: 5px;
+}
+
+.col-6 {
+    width: 50%;
+    padding: 5px;
+}
+
+.col-7 {
+    width: 58.333333%;
+    padding: 5px;
+}
+
+.col-8 {
+    width: 66.666666%;
+    padding: 5px;
+}
+
+.col-9 {
+    width: 75%;
+    padding: 5px;
+}
+
+.col-10 {
+    width:83.33333%; ;
+    padding: 5px;
+}
+
+.col-11 {
+    width: 91.66666%;
+    padding: 5px;
+}
+
+.col-12 {
+    width: 100%;   
+}
+
+/* nouvelle rangée */
+
+/* les marges à gauche pour créer si on le veut des colonnes vides */
+
+.marge-1 {
+    margin-left: 8.333333%;
+}
+.marge-2 {
+    margin-left: 16.66666%;
+}
+.marge-3 {
+    margin-left: 25%;
+}
+.marge-4 {
+    margin-left: 33.333333%;
+}
+.marge-5 {
+    margin-left: 41.666666%;
+}
+.marge-6 {
+    margin-left: 50%;
+}
+.marge-7 {
+    margin-left: 58.333333%;
+}
+.marge-8 {
+    margin-left: 66.666666%;
+}
+.marge-9 {
+    margin-left: 75%;
+}
+.marge-10 {
+    margin-left: 83.333333%;
+}
+.marge-11 {
+    margin-left: 91.666666%;
+}
+
+/* Classe pour les images adaptatives */
+
+.img-fluide {
+    width: 100%;
+}
+
+/* Les règles de medias queries pour le responsive et les différents écrans */
+
+/* Pour les téléphones ou les smartphones */
+
+@media (max-width: 320px) {
+
+    .column-xs {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col-xs-12 {
+        width: 100%;
+    }
+
+    /* Ici marge-xs annule la marge-6 sur la nav */
+
+    .marge-xs {
+        margin-left: 0;
+    }
+    
+    body {
+        background-color: white;
+    }
+
+    main {
+        width: 100%;
+        margin-left: auto;
+        margin-bottom: 5px;
+    }
+
+}
+
+
+/* Fin pour les téléphones */
+
+/* Pour les petites tablettes et les smartphones grand écrans, ou mode paysage sur le téléphone */
+
+@media (min-width: 321px) and (max-width: 767px) {
+    body {
+        background-color: rgb(248,190, 200);
+    }
+
+    main {
+        width: 100%;
+    }
+}
+
+/*Pour les tablettes et certains ordinateurs portables  */
+
+@media (min-width: 768px) and (max-width: 1096px) {
+    body {
+        background-color: rgba(14, 166, 212, 0.226);
+    }
+
+    main {
+        background-color: white;
+    }
+
+/*Avec reverse on dit a l element d inverser son placement */
+
+    .column-reverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+/* Pour les ordinateur de bureau, les écrans plus grands que 1097px */
+
+@media (min-width: 1097px) {
+    body {
+        background-color: rgb(216, 238, 212);
+    }
+}

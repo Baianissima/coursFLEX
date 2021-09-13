@@ -48,11 +48,7 @@ main {
     flex-direction: row;
     /* passage à la ligne des éléments pour que la largeur des col soit respectée */
     flex-wrap: wrap;
-    row-gap: 5px;
-
-    margin-bottom: 5px;
-
-    border: 1px solid;
+    row-gap: 500px;
 }
 
 .colomn {
@@ -63,6 +59,7 @@ main {
 .centre {
     justify-content: center;
 }
+
 
 /* la grille sur 12 colonnes, et la définition de la largeur des colonnes */
 
@@ -127,69 +124,38 @@ main {
     padding: 5px;    
 }
 
-/* nouvelle rangée */
+/***** ICI EXO 12 colonnes sur nouveau ROW - 2eeme DIV : row-2 ****/
 
-/* les marges à gauche pour créer si on le veut des colonnes vides */
-.marge-1 {
-    margin-left: 8.333333%;
-}
-.marge-2 {
-    margin-left: 16.66666%;
-}
-.marge-3 {
-    margin-left: 25%;
-}
-.marge-4 {
-    margin-left: 33.333333%;
-}
-.marge-5 {
-    margin-left: 41.666666%;
-}
-.marge-6 {
-    margin-left: 50%;
-}
-.marge-7 {
-    margin-left: 58.333333%;
-}
-.marge-8 {
-    margin-left: 66.666666%;
-}
-.marge-9 {
-    margin-left: 75%;
-}
-.marge-10 {
-    margin-left: 83.333333%;
-}
-.marge-11 {
-    margin-left: 91.666666%;
+.row-2 {
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    /* justify-content: space-evenly; */
+
+    
 }
 
-/* marge-12 : pas besoin puisque c'est la dernière */
+.row-2 div {
+    width: 8.333333%;
+    /* width: 6%; */
+    border: 1px solid red;
+}
 
-h1 {
-    background: url("../img/dolomites-italie.jpg") no-repeat;
-    background-position: center;
-    background-size: cover;
+.col-1, .col-3, .col-5, .col-7, .col-9, .col-11 {
+    background-color: aquamarine;
+}
 
-    height: 250px;
-    line-height: 250px;
+.argent {
+    background-color: lightgrey;
+}
+
+p {
     text-align: center;
-    width: 80%;
-}
-
-.transparent {
-    background-color: white;
-    opacity: 0.8;
-    border-radius: 5px;
 }
 
 
 
 
-
-
-
-/* Ici d'autres commentaires */
 
 
 /* MDN : La propriété flex-wrap indique si les éléments flexibles sont contraints à être disposés sur une seule ligne ou s'ils peuvent être affichés sur plusieurs lignes avec un retour automatique. Si le retour à la ligne est autorisé, la propriété permet également de contrôler la direction dans laquelle les lignes sont empilées.*/
