@@ -11,12 +11,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-
-/* Les sections sont displays-flex */
+/* Les sections sont display-flex */
 
 section {
    display: flex;
-   flex-direction: row;
+   /* flex-direction: row; */
 
    max-width: 1000px;
    margin: auto;
@@ -27,7 +26,7 @@ section {
     margin: 10px;
     border: 1px dotted black;
 
-    /*Avec flex-grow et flex-shrink ( il faut les utiliser au même temps)nous voulons que nos colonnes se comportent de la même façon lorsqu'elles s'agrandissent ou se rapetissent*/
+    /*Avec flex-grow et flex-shrink ( il faut les utiliser au même temps) nous voulons que nos colonnes se comportent de la même façon lorsqu'elles s'agrandissent ou se rapetissent*/
 
     /* On donne la valeur 1 qui indique à flex-box comment augmenter cette taille si nécessaire */
 
@@ -39,16 +38,11 @@ section {
     /* Avec flex-basis on peut avoir des pixels */
     /* flex-basis: 0; */
 
-    /*ci dessou, le propritées raccourcies pour les 3 propritetés au même temps : grow shrink basis */
+    /*ci dessous, les propritées raccourcies pour les 3 propritetés au même temps : grow shrink basis */
     /* flex: 1 1 0; */
 
     flex: 1 1 0;
 }
-
-
-
-
-
 
 /* Couleurs pour identifier */
 
