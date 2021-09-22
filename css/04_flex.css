@@ -67,7 +67,7 @@ body {
 
 .col-3 {
     width: 25%;
-    padding: 5px;
+    /* padding: 5px; */
 }
 
 .col-4 {
@@ -97,7 +97,7 @@ body {
 
 .col-9 {
     width: 75%;
-    padding: 5px;
+    /* padding: 5px; */
 }
 
 .col-10 {
@@ -112,7 +112,7 @@ body {
 
 .col-12 {
     width: 100%;
-    padding: 5px;    
+    /* padding: 5px;     */
 }
 
 /* les marges à gauche pour créer si on le veut des colonnes vides */

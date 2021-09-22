@@ -13,38 +13,84 @@ body {
 /* en-tête */
 header {
     display: flex;
-    flex-direction: row;
+    width: 1000px;
+    height: 150px;
+    align-items: center;
     background-color: white;
-    /* justify-content: space-between; */
-    /* align-items: flex-end; */
+    border-bottom: 1px solid lightgrey;
 }
 
-header > div > img {
+/* pour centrer le header avec main, avec le body gris  */
+#header {
     display: flex;
-    font-size: 300%;
-    margin: 20px;
+    justify-content: center;
 }
 
-header > div > h1 {
+header p {
+    /* font-family: */
     display: flex;
-    font-size: 200%;
-    padding: 50px;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-left: 10px;
+    color: brown;
+    font-size: 150%;
+    font-style: italic;
+    font-weight: bold;
 }
 
 header nav {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
+    justify-content: flex-end;
+    padding: 10px 30px;
+    /* margin: 10px; */
+    width: 60%;
 }
 
 header nav a {
-    padding-left: 50px;
+    /* justify-content: space-between; */
+    padding-left: 20px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight:normal;
+    color:black;
+}
+
+header > img {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  
+    /* justify-content: space-between; */
+}
+
+header > div > img {
+    display: flex;
+    font-size: 200%;
+    margin-left: 20px;
 }
 
 /* le contenu principal dans main  */
+
+/* .row {
+    display: flex;
+    flex-direction: row;
+} */
+
+.colonne {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+h1 {
+    font-weight: normal;
+    margin: 30px;
+}
+
+h3 {
+    font-weight: normal;
+}
+
 main {
     width: 1000px;
     margin: 0 auto;
@@ -53,87 +99,127 @@ main {
     background-color: white;
 }
 
-main img {
-    width: 100%;
-}
-
-main section {
+section {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding-bottom: 150px; 
+    /* justify-content: space-between; */
+    /* padding-bottom: 150px;  */
 }
 
-main article {
-    position: relative;
-    margin: 50px auto;
-    width: 35%;
-}
-
-main article figure {
-    position: relative;
-    text-align: center;
-}
-
-main article figcaption {
-    position: absolute;
-    bottom: 15px;
-    width: 100%;
-}
-
-main article div {
+#section-1 {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: left; */
+    /* width: 60%; */
+}
+
+/* article p { */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+/* } */
+
+#section-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: left; */
+    /* width: 40%; */
+}
+
+/* .row {
+    
+} */
+
+/* les classes et mesures en colonnes */
+.col-1 {
+    /* cette valeur est la largeur en % d'une colonne si je veux la largeur de 2 colonnes je fais la largeur d'une colonne X 2 */
+    width: 8.333333%;
+    padding: 5px;
+}
+
+.col-2 {
+    width: 16.666666%;
+    padding: 5px;
+}
+
+.col-3 {
+    width: 25%;
+    padding: 5px;
+}
+
+.col-4 {
+    width: 33.333333%;
+    padding: 5px;
+}
+
+.col-5 {
+    width: 41.666666%;
+    padding: 5px;
+}
+
+.col-6 {
+    width: 50%;
+    padding: 5px;
+}
+
+.col-7 {
+    width: 58.333333%;
+    padding: 5px;
+}
+
+.col-8 {
+    width: 66.666666%;
+    padding: 5px;
+}
+
+.col-9 {
+    width: 75%;
+    padding: 5px;
+}
+
+.col-10 {
+    width: 83.333333%;
+    padding: 5px;
+}
+
+.col-11 {
+    width: 91.666666%;
+    padding: 5px;
+}
+
+.col-12 {
+    width: 100%;
+    padding: 5px;    
 }
 
 
 
 /* le pied de page */
-
 footer {
-    background-color: white;
-    color: grey;
-}
-
-.aside_gauche {
-    width: 100px;
-    background-color: lightgrey;   
-}
-
-footer section {
     display: flex;
-    /* flex-wrap: wrap; */
-    justify-content: space-between;
-}
-
-footer figure {
-    width: 20%;
-    text-align: center;
-}
-
-footer figure img {
-    padding-bottom: 20px;
-}
-
-footer figcaption, footer p {
-    font-size: small;
-    text-align: center;
-}
-
-footer hr {
-    width: 80%;
-    margin: 20px auto;
-}
-/* la partie réseaux sociaux  */
-#reseaux {
     justify-content: center;
-    margin: 30px;
+    margin: 0 auto;
+    width: 1000px;
+    height: 80px;
+    align-items: center;
+    background-color: white;
+    border-top: 1px solid lightgrey;
 }
 
-#reseaux a {
-    display: inline-block;
-    margin: 0 50px;
+#footer {
+    display: flex;
+    justify-content: center;
 }
+
+
+
+
+
+
+
 
 /* les styles pour media queries */
 
