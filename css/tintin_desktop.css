@@ -39,8 +39,7 @@ body {
 .conteneur {
     margin: 0 auto;
     width: 80%;
-    /* border: 1px solid red;
-    padding: 10px; */
+    /* border: 1px solid red;*/
 }
 
 /* en-tête */
@@ -71,19 +70,22 @@ h1 {
 }
 
 /* partie principale */
+
+section {
+    height: 350px;
+}
+
 section div {
     padding: 50px;
 }
 
 .col-4 {
     width: 33.333333%;
-    height: 300px;
     background-color: var(--vert-moyen);
 }
 
 .col-8 {
     width: 66.666666%;
-    height: 300px;
     background-color: var(--bleu-ciel);
 }
 
@@ -126,6 +128,7 @@ footer p {
 
    .conteneur {
        display: flex;
+       flex-direction: column;
        width: 100%;
    }
 
@@ -133,6 +136,8 @@ footer p {
 
    .col-xs-12 { 
        width: 100%;
+       display: flex;
+       flex-direction: column;
    }
 
    header {
@@ -144,19 +149,47 @@ footer p {
    nav a {
        padding: 0;
        line-height: 0;
+       display: flex;
+       flex-direction: column;
    }
 
    h1 {
-       padding-left: 0;
+       padding-top: 10px;
+       padding-left: 30px;
+       font-size: 2rem;
    }
 
-   p {
+   div p {
        padding: 0;
+       font-size: 1.5rem;
    }
+
+   section {
+    display: flex;
+    flex-flow: column wrap;
+   }
+
+   .col-4 {
+    width: 33.333333%;
+    background-color: var(--vert-moyen);
+    display: flex;
+    padding: 30px;
+    }
+
+    .col-8 {
+    width: 66.666666%;
+    background-color: var(--bleu-ciel);
+    display: flex;
+    padding: 30px;
+    }
+
+    footer {
+    display: flex;
+    flex-direction: column;
+    }
 
    footer p {
     text-align: center;
-    padding: 0;
     }
 }
 
@@ -174,18 +207,7 @@ footer p {
 
 
 
-
-
-
-
-
-
-
 /* les classes et mesures en colonnes */
-
-/* .row {
-    
-} */
 
 /* .row {
     display: flex;
@@ -280,8 +302,4 @@ footer p {
     border-top: 1px solid lightgrey; */
 /* } */
 
-#footer {
-    display: flex;
-    justify-content: center;
-}
 
