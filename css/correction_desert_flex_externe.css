@@ -23,17 +23,11 @@ body {
     margin: 0;
 }
 
-h1 {
-    font-family: 'Philosopher', sans-serif;
-    color: var(--ocre);
-    padding-left: 15px; /* pour separer le h1 du logo depuis la gauche */
-    letter-spacing: -1px;/* pour rapprocher les lettres */
-}
-
 .conteneur {
     background-color: var(--blanc);
     width: 60%;
     margin: auto;
+    /* border: 1px solid red; */
 }
 
 header {
@@ -43,6 +37,13 @@ header {
     align-items: center;
     padding-left: 30px;
     border-bottom: 1px solid var(--gris-clair);
+}
+
+h1 {
+    font-family: 'Philosopher', sans-serif;
+    color: var(--ocre);
+    padding-left: 15px;      /* pour separer le h1 du logo depuis la gauche */
+    letter-spacing: -1px;    /* pour rapprocher les lettres */
 }
 
 header div {
@@ -68,8 +69,8 @@ nav a:hover {
 
 /* partie principale */
 
-h2{
-    text-indent: 10%;/* donner une marge p paragraphe */
+h2 {
+    text-indent: 5%;    /* donner une marge p le texte */
     font-size: 1.3em;
 }
 
@@ -77,8 +78,17 @@ section div {
     padding: 20px;
 }
 
+aside {
+    margin: 5px;
+    margin-left: 20px;
+}
+
 img {
-    max-width: 100%;/* l'image fera au max100% deson parent, pour media queries */
+    max-width: 100%;       /* l'image fera au max100% de son parent, pour media queries */
+}
+
+div p {
+    padding: 10px;
 }
 
 h3 {
@@ -94,14 +104,15 @@ h3:nth-of-type(2) { /* ici on selectionne le 2e h3 de notre html */
 
 footer {
     height: 80px;
+    width: 100%;
     border-top: 1px solid var(--gris-clair);
+    text-align: center;
 }
-
 
 /* les classes pour déclarer les colonnes */
 
 .col-1 {
-    /* cette valeur est la largeur en % d'une colonne si je veux la largeur de 2 colonnes je fais la largeur d'une colonne X 2 */
+        /* cette valeur est la largeur en % d'une colonne si je veux la largeur de 2 colonnes je fais la largeur d'une colonne X 2 */
     width: 8.333333%;
     padding: 5px;
 }
@@ -113,7 +124,7 @@ footer {
 
 .col-3 {
     width: 25%;
-    /* padding: 5px; */
+    padding: 5px;
 }
 
 .col-4 {
@@ -143,7 +154,7 @@ footer {
 
 .col-9 {
     width: 75%;
-    /* padding: 5px; */
+    padding: 5px;
 }
 
 .col-10 {
@@ -158,21 +169,25 @@ footer {
 
 .col-12 {
     width: 100%;
-    /* padding: 5px;     */
+    padding: 5px;    
 }
-
 
 /* Déclaration des media queries */
 
 /* pour les telephones */
 
 @media screen and (max-width: 800px) {
+
+     /* Ici on déclare que notre colonne doit faire toute la largeur de sont parent, en les faisant descendre l'une en dessous de l'autre, tout en verticale, en responsive, et non à l'horizontale */
+
     .conteneur {
+        display: flex;
         width: 100%;
     }
 
-    /* Ici on déclare que notre colonne doit faire toute la largeur de sont parent, en les faisant descendre l'une en dessous de l'autre, tout en verticale, en responsive, et non à l'horizontale */
-    .col-xs-12 { /* ça ressemble a bootstrap, on dit ici q toutes les colonnes se mettent l une en dessus de l autre qd sur mobile */
+    /* * ça ressemble a bootstrap, on dit ici q toutes les colonnes se mettent l une en dessous de l'autre qd sur mobile : xs :ecran extrasmall */ 
+
+    .col-xs-12 { 
         width: 100%;
     }
 
@@ -197,12 +212,6 @@ footer {
         width: 100%;
     }
 }
-
-
-
-
-
-
 
 
 

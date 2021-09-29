@@ -18,50 +18,159 @@ pied de page : 008080
 */
 
 
-/* en-tête */
-body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: white;
-    color: white;
-    text-align: justify;
-    border: 1px solid blue;
+/* déclaration des couleurs en :root */
+
+:root {
+    --vert-aqua: #00ced1;
+    --bleu-ciel: #add8e6;
+    --blanc: #fff;
+    --noir: #000;
+    --vert-moyen: #5f9ea0;
+    --bleu-royal: blue;
+    --vert-foncé: #008080;
 }
 
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--blanc);
+}
+
+.conteneur {
+    margin: 0 auto;
+    width: 80%;
+    /* border: 1px solid red;
+    padding: 10px; */
+}
+
+/* en-tête */
 header {
     display: flex;
-    width: 1000px;
-    height: 200px;
-    margin: 0 auto;
+    height: 300px;
     background-color: #00ced1;
-    border: 1px solid red;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    padding-left: 30px;
 }
 
 h1 {
-    height: 250px;
-    line-height: 250px;
-    text-align: center;
-    width: 80%;
+    color: var(--blanc);
+    font-size: 3rem;
+    padding-left: 150px;
 }
 
-main {
-    width: 1000px;
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* partie principale */
+section div {
+    padding: 50px;
+}
+
+.col-4 {
+    width: 33.333333%;
     height: 300px;
-    margin: 0 auto;
-    background-color: #add8e6;
-    border: 1px solid yellow;
+    background-color: var(--vert-moyen);
+}
+
+.col-8 {
+    width: 66.666666%;
+    height: 300px;
+    background-color: var(--bleu-ciel);
+}
+
+div ul li {
+    font-size: 1.5em;
+    list-style: none;
+    line-height: 1.2em;
+    padding: 10px;
+}
+
+h2 {
+    padding: 10px;
+}
+
+div p {
+    padding: 10px;
+    font-size: 1.5em;
 }
 
 footer {
+    height: 80px;
     background-color: #008080;
-    border: 1px solid red;
-    color: black;
+    color: var(--blanc);
+    font-weight: bold;
+}
+
+footer p {
+    text-align: center;
+    padding: 20px;
 }
 
 
+/* Déclaration des media queries */
 
+/* pour les telephones */
 
+@media screen and (max-width: 600px) {
 
+    /* Ici on déclare que notre colonne doit faire toute la largeur de sont parent, en les faisant descendre l'une en dessous de l'autre, tout en verticale, en responsive, et non à l'horizontale */
 
+   .conteneur {
+       display: flex;
+       width: 100%;
+   }
+
+   /* * ça ressemble a bootstrap, on dit ici q toutes les colonnes se mettent l une en dessous de l'autre qd sur mobile : xs :ecran extrasmall */ 
+
+   .col-xs-12 { 
+       width: 100%;
+   }
+
+   header {
+       padding-left: 0;/* ici on eneleve le padding left qu on a mis sur header desktop */
+       flex-flow: column wrap;
+       text-align: center;
+   }
+
+   nav a {
+       padding: 0;
+       line-height: 0;
+   }
+
+   h1 {
+       padding-left: 0;
+   }
+
+   p {
+       padding: 0;
+   }
+
+   footer p {
+    text-align: center;
+    padding: 0;
+    }
+}
+
+/* pour les tablettes */
+/* @media screen and (min-width: 801px) and (max-width: 1200px)  { 
+   .conteneur {
+       width: 100%;
+   }
+
+   .col-md-12 {
+       width: 100%;
+   }
+}
+ */
 
 
 
@@ -78,21 +187,21 @@ footer {
     
 } */
 
-.row {
+/* .row {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; */
     /* passage à la ligne des éléments pour que la largeur des col soit respectée */
-    flex-wrap: wrap;
+    /* flex-wrap: wrap;
     row-gap: 5px;
     margin-bottom: 5px;
-}
+} */
 
 /* la classe pour mettre les éléments les uns en dessous des autres */
-
+/* 
 .column {
     display: flex;
     flex-direction: column;
-}
+} */
 
 .col-1 {
     /* cette valeur est la largeur en % d'une colonne si je veux la largeur de 2 colonnes je fais la largeur d'une colonne X 2 */
@@ -102,72 +211,74 @@ footer {
 
 .col-2 {
     width: 16.666666%;
-    padding: 5px;
+    /* padding: 5px; */
 }
 
 .col-3 {
     width: 25%;
-    padding: 5px;
+    /* padding: 5px; */
 }
 
-.col-4 {
+/* .col-4 {
     width: 33.333333%;
-    padding: 5px;
-}
+    height: 300px;
+    /* padding: 5px; */
+/* } */
 
 .col-5 {
     width: 41.666666%;
-    padding: 5px;
+    /* padding: 5px; */
 }
 
 .col-6 {
     width: 50%;
-    padding: 5px;
+    /* padding: 5px; */
 }
 
 .col-7 {
     width: 58.333333%;
-    padding: 5px;
+    /* padding: 5px; */
 }
 
-.col-8 {
+/* .col-8 {
     width: 66.666666%;
-    padding: 5px;
-}
+    /* padding: 5px; */
+    /* height: 300px;
+} */ 
 
 .col-9 {
     width: 75%;
-    padding: 5px;
+    /* padding: 5px; */
 }
 
 .col-10 {
     width: 83.333333%;
-    padding: 5px;
+    /* padding: 5px; */
 }
 
 .col-11 {
     width: 91.666666%;
-    padding: 5px;
+    /* padding: 5px; */
 }
 
 .col-12 {
     width: 100%;
-    padding: 5px;    
+    /* padding: 5px;     */
 }
 
 
 
 /* le pied de page */
-footer {
-    display: flex;
+/* footer { */
+    /* display: flex;
     justify-content: center;
     margin: 0 auto;
     width: 1000px;
     height: 80px;
     align-items: center;
     background-color: white;
-    border-top: 1px solid lightgrey;
-}
+    border-top: 1px solid lightgrey; */
+/* } */
 
 #footer {
     display: flex;
