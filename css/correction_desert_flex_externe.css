@@ -10,10 +10,9 @@
 /* déclaration des couleurs en :root */
 
 :root {
-    --gris-clair: #ddd;
+    --pink: #bd549f;
     --blanc: #fff;
     --noir: #000;
-    --ocre: #a65122;
 }
 
 body {
